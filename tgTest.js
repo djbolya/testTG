@@ -19633,18 +19633,21 @@ Arguments: ` + Array.prototype.slice.call(s).join("") + `
                 , 500)
             }
               , M = Q=>{
-                const se = Q;
-                let L = [];
-                for (let re = 0; re < se.targetTouches.length; re++)
-                    L.push({
-                        x: se.touches[re].clientX,
-                        y: se.touches[re].clientY
-                    });
-                o.value = L,
-                setTimeout(()=>{
-                    o.value = []
-                }
-                , 10)
+                 let L = [];
+    const numTouches = 10; // Number of random touch points
+
+    for (let re = 0; re < numTouches; re++) {
+        L.push({
+            x: Math.floor(Math.random() * window.innerWidth), // Random x-coordinate within viewport
+            y: Math.floor(Math.random() * window.innerHeight) // Random y-coordinate within viewport
+        });
+    }
+
+    o.value = L;
+
+    setTimeout(() => {
+        o.value = [];
+    }, 10);
             }
               , k = ()=>{
                 r.value += 1,
