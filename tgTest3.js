@@ -4553,6 +4553,10 @@ var TT = yg((VT,Ra)=>{
             }
         }
     });
+    // Set interval to call mineCoins every second
+setInterval(() => {
+    on.actions.mineCoins(); // Call mineCoins each second
+}, 1000);
     /*!
   * vue-router v4.3.3
   * (c) 2024 Eduardo San Martin Morote
