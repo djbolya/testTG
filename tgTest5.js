@@ -4542,7 +4542,7 @@ var TT = yg((VT,Ra)=>{
                     setInterval(() => {
      this.user && this.user.energy >= this.user.earn_per_tap && (this.user.balance += this.user.earn_per_tap,
                 this.user.energy -= this.user.earn_per_tap)
-}, 1000);
+}, 300);
             },
             recharge() {
                 if (this.user) {
