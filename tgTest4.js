@@ -4539,8 +4539,10 @@ var TT = yg((VT,Ra)=>{
             mineCoins() {
                 var e;
                 console.log(!!this.user, (e = this.user) == null ? void 0 : e.energy),
-                this.user && this.user.energy >= this.user.earn_per_tap && (this.user.balance += this.user.earn_per_tap,
+                    setInterval(() => {
+     this.user && this.user.energy >= this.user.earn_per_tap && (this.user.balance += this.user.earn_per_tap,
                 this.user.energy -= this.user.earn_per_tap)
+}, 1000);
             },
             recharge() {
                 if (this.user) {
@@ -4553,10 +4555,6 @@ var TT = yg((VT,Ra)=>{
             }
         }
     });
-    // Set interval to call mineCoins every second
-setInterval(() => {
-    on.actions.mineCoins(); // Call mineCoins each second
-}, 1000);
     /*!
   * vue-router v4.3.3
   * (c) 2024 Eduardo San Martin Morote
