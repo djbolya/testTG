@@ -4539,10 +4539,8 @@ var TT = yg((VT,Ra)=>{
             mineCoins() {
                 var e;
                 console.log(!!this.user, (e = this.user) == null ? void 0 : e.energy),
-                    setInterval(() => {
      this.user && this.user.energy >= this.user.earn_per_tap && (this.user.balance += this.user.earn_per_tap,
                 this.user.energy -= this.user.earn_per_tap)
-}, 300);
             },
             recharge() {
                 if (this.user) {
